@@ -23,11 +23,11 @@ RUN wget -q -O /tmp/opengfx-${OPENGFX_VERSION}.zip  https://cdn.openttd.org/open
     tar -xf /tmp/opengfx-${OPENGFX_VERSION}.tar && \
     rm -rf /tmp/opengfx-*.tar /tmp/opengfx-*.zip
 
-RUN \
-  sed -i 's|</applications>|  <application title="Open TTD" type="normal">\n    <maximized>yes</maximized>\n  </application>\n</applications>|' /etc/xdg/openbox/rc.xml && \
-  echo "**** cleanup ****" && \
-  rm -rf \
-    /tmp/* \
+#RUN \
+#  sed -i 's|</applications>|  <application title="Open TTD" type="normal">\n    <maximized>yes</maximized>\n  </application>\n</applications>|' /etc/xdg/openbox/rc.xml && \
+#  echo "**** cleanup ****" && \
+#  rm -rf \
+#    /tmp/* \
 
 
 # add local files
